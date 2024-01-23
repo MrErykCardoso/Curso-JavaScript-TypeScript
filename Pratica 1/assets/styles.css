@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 6.25%;
+}
+
+body {
+    font-size: 16rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rem solid black;
+    padding: 30rem;
+}
+
+.nav ul {
+    display: flex;
+    width: 25%;
+    padding-right: 70rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav ul a {
+    cursor: pointer;
+    transition: 400ms all cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.nav ul a:hover {
+    color: red;
+}

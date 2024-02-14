@@ -90,6 +90,27 @@ form div button {
     color: #dec129;
 }
 
+.exe3 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30rem;
+}
+
+.butExe3 {
+    background: #dec129;
+    border-radius: 5rem;
+    border: black 1rem solid;
+    padding: 5rem 20rem 5rem 20rem;
+    font-weight: bold;
+}
+
+.dateExe3 {
+    font-weight: bold;
+    font-size: 20rem;
+}
+
 .exe {
     max-width: 1200px;
     margin: 0 auto;
@@ -192,10 +213,10 @@ form div button {
     width: 40%;
 }
 
-.resultExe1 {
+.resultExe1Painel {
     max-width: 900rem;
     margin: 0 auto;
-    min-height: 30vh;
+    min-height: 10vh;
     display: flex;
     flex-flow: column;
 }

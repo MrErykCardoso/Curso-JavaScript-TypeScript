@@ -6,92 +6,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prática</title>
     <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
+    <!--/////////////////////////////////////////////////////////////////////////////////////-->
     <nav class="nav">
-        <div>
-            <h1>Área de testes de java Script</h1>
-            <p>Cuidado onde pisa, o site pode quebrar a qualquer momento!</p>
+        <div class="but-lateral">
+            <i class="bi bi-list"></i>
         </div>
         <ul>
-            <li><a>AnyThing</a></li>
-            <li><a>AnyThing</a></li>
-            <li><a>AnyThing</a></li>
+            <li class="item-menu">
+                <a href="#exe4">
+                    <span class="icon"><i class="bi bi-4-circle-fill"></i></span>
+                    <span class="txt">Exemplo 4</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#exe3">
+                    <span class="icon"><i class="bi bi-3-circle-fill"></i></span>
+                    <span class="txt">Exemplo 3</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#exe2">
+                    <span class="icon"><i class="bi bi-2-circle-fill"></i></span>
+                    <span class="txt">Exemplo 2</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#exe1">
+                    <span class="icon"><i class="bi bi-1-circle-fill"></i></span>
+                    <span class="txt">Exemplo 1</span>
+                </a>
+            </li>
+            <li class="but-up">
+                <a href="#up">
+                    <span class="icon"><i class="bi bi-arrow-up-circle-fill"></i></span>
+                    <span class="txt">Início</span>
+                </a>
+            </li>
         </ul>
     </nav>
-    <div class="exe exe3">
-        <h1>Veja a hora atual:</h1>
-        <button class="butExe3">Clique aqui</button>
-        <div class="resultExe3"></div>
-    </div>
-    <div class="exe exe2">
-        <div class="grid1">
-            <h1 class="title">Tabela IMC</h1>
-            <div class="tb1">
-                <h1><strong>IMC</strong></h1>
-                <p>Menos do que 18,5</p>
-                <p>Entre 18,5 e 24,9</p>
-                <p>Entre 25 e 29,9</p>
-                <p>Entre 30 e 34,9</p>
-                <p>Entre 35 e 39,9</p>
-                <p>Mais do que 40</p>
+    <header class="header" id="up">
+        <div>
+            <h1>Área de testes de JavaScript / TypeScript</h1>
+            <p>Cuidado onde pisa, o site pode quebrar a qualquer momento!</p>
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////////////////////////////////////////-->
+
+    <!--//////////////////////////////////Exercício 4////////////////////////////////////////-->
+    <div class="exe" id="exe4">
+        <div class="exe4">
+            <h1>Exibição simples usando for (JavaScript):</h1>
+            <div class="butDiv">
+                <button class="butExe4">Exibir</button>
+                <button class="butClear4">Limpar</button>
             </div>
-            <div class="tb2">
-                <h1><strong>Resultado</strong></h1>
-                <p>Abaixo do peso</p>
-                <p>Peso normal</p>
-                <p>Sobrepeso</p>
-                <p>Obesidade de grau 1</p>
-                <p>Obesidade de grau 2</p>
-                <p>Obesidade de grau 3</p>
+            <div class="resultExe4">
+                <!--Exibindo aqui-->
             </div>
         </div>
-        <form action="" method="get" class="form2">
-            <h2>Calcule seu IMC</h2>
-            <div>
-                <label>Peso: </label>
-                <input type="text" class="weight">
+    </div>
+    <!--//////////////////////////////////Exercício 3////////////////////////////////////////-->
+    <div class="exe" id="exe3">
+        <div class="exe3">
+            <h1>Exibição simples usando objeto Date():</h1>
+            <div class="butDiv">
+                <button class="butExe3">Exibir</button>
+                <button class="butClear3">Limpar</button>
             </div>
-            <div>
-                <label>Altura: </label>
-                <input type="text" class="height">
+            <div class="resultExe3"></div>
+        </div>
+    </div>
+    <!--//////////////////////////////////Exercício 2////////////////////////////////////////-->
+    <div class="exe" id="exe2">
+        <div class="exe2">
+            <div class="grid1">
+                <h1 class="title">Tabela IMC</h1>
+                <div class="tb1">
+                    <h1><strong>IMC</strong></h1>
+                    <p>Menos do que 18,5</p>
+                    <p>Entre 18,5 e 24,9</p>
+                    <p>Entre 25 e 29,9</p>
+                    <p>Entre 30 e 34,9</p>
+                    <p>Entre 35 e 39,9</p>
+                    <p>Mais do que 40</p>
+                </div>
+                <div class="tb2">
+                    <h1><strong>Resultado</strong></h1>
+                    <p>Abaixo do peso</p>
+                    <p>Peso normal</p>
+                    <p>Sobrepeso</p>
+                    <p>Obesidade de grau 1</p>
+                    <p>Obesidade de grau 2</p>
+                    <p>Obesidade de grau 3</p>
+                </div>
             </div>
-            <div><button type="submit">Enviar</button></div>
-        </form>
-        <div class="resultExe2">
+            <form action="" method="get" class="form2">
+                <h2>Calcule seu IMC</h2>
+                <div>
+                    <label>Peso: </label>
+                    <input type="text" class="weight">
+                </div>
+                <div>
+                    <label>Altura: </label>
+                    <input type="text" class="height">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="resultExe2">
+            </div>
+        </div>
+    </div>
+    <!--//////////////////////////////////Exercício 1////////////////////////////////////////-->
+    <div class="exe" id="exe1">
+        <div class="exe1">
+            <form action="" method="get" class="form1">
+                <div>
+                    <h2>Exercício de function, array e object:</h2>
+                </div>
+                <div>
+                    <label>Nome: </label>
+                    <input type="text" placeholder="Apenas o primeiro nome..." class="name">
+                </div>
+                <div>
+                    <label>Sobrenome: </label>
+                    <input type="text" placeholder="Apenas o ultimo nome..." class="sob">
+                </div>
+                <div>
+                    <label>Altura: </label>
+                    <input type="text" placeholder="Altura em metros. Ex: 1.75..." class="alt">
+                </div>
+                <div>
+                    <label>Peso: </label>
+                    <input type="text" placeholder="Peso em Kg. Exe: 80..." class="peso">
+                </div>
+                <button>Enviar</button>
+            </form>
+            <div class="resultExe1Painel">
+                <h3>Confira a ultima inscrição:</h3>
+                <div class="resultExe1"></div>
+            </div>
         </div>
     </div>
 
-
-    <div class="exe exe1">
-        <form action="" method="get" class="form1">
-            <div>
-                <h2>Exercício de function, array e object:</h2>
-            </div>
-            <div>
-                <label>Nome: </label>
-                <input type="text" placeholder="Seu nome aqui" class="name">
-            </div>
-            <div>
-                <label>Sobrenome: </label>
-                <input type="text" placeholder="Seu sobrenome aqui" class="sob">
-            </div>
-            <div>
-                <label>Altura: </label>
-                <input type="text" placeholder="Sua altura aqui" class="alt">
-            </div>
-            <div>
-                <label>Peso: </label>
-                <input type="text" placeholder="Seu peso aqui" class="peso">
-            </div>
-            <div><button>Enviar</button></div>
-        </form>
-        <div class="resultExe1Painel">
-            <h3>Confira a ultima inscrição: </h3>
-            <div class="resultExe1"></div>
-        </div>
-    </div>
     <script src="./assets/script.js"></script>
 </body>
 

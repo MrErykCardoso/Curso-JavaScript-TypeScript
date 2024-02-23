@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +9,12 @@
 html {
     font-size: 6.25%;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
     font-size: 16rem;
-    background-image: url(./img/wallpaperflare.com_wallpaper.jpg);
+    background-image: url(./img/endless-constellation.svg);
     background-position: center center;
     background-attachment: fixed;
 }
@@ -22,75 +25,157 @@ form {
     justify-content: center;
     align-items: center;
     padding: 30rem;
-    margin: 39rem;
-}
-
-buttom {
-    cursor: pointer;
 }
 
 form div {
     padding-bottom: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 form input {
     padding: 5rem;
     width: 70%;
-    border: 1rem solid #dec129;
+    border: 1rem solid #550055;
     border-radius: 5rem;
 }
 
-form div button {
-    padding: 5rem 10rem 5rem 10rem;
-    color: black;
-    background: #dec129;
-    border: 1rem solid black;
+button {
+    cursor: pointer;
+    padding: 5rem 10rem;
+    color: whitesmoke;
+    background: #550055;
+    border: 1rem solid #330033;
     border-radius: 5rem;
     font-weight: bold;
     font-size: 18rem;
-    width: 100%;
+    width: 45%;
 }
 
 .nav {
+    height: 100vh;
+    width: 62rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1F001F;
+    border-right: 3rem solid #550055;
+    transition: 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
     display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+}
+
+.expand {
+    width: 210rem;
+}
+
+.nav ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.nav ul li {
+    padding: 15rem 18rem;
+    width: 210rem;
+    transition: 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav ul li:hover {
+    background: #550055;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.but-lateral {
+    color: whitesmoke;
+    font-size: 30rem;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    transition: 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.but-lateral i {
+    width: 64rem;
+    padding: 15rem;
+}
+
+.but-lateral i:hover {
+    background: #550055;
+}
+
+.icon {
+    font-size: 25rem;
+}
+
+.txt {
+    padding-left: 35rem;
+}
+
+.ativo {
+    background: #550055;
+}
+
+.butDiv {
+    width: 50%;
+    display: flex;
+    flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 5rem solid whitesmoke;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5rem solid #1F001F;
     border-radius: 20rem;
     padding: 30rem;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 20rem;
-    background: black;
+    background: #550055;
+    color: black;
+}
+
+.header h1 {
+    color: whitesmoke;
+    padding-bottom: 10rem;
+}
+
+.header p {
+    text-align: center;
     color: whitesmoke;
 }
 
-.nav ul {
+.exe {
+    background: #1F001F;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20rem;
+    color: whitesmoke;
+    margin-top: 30rem;
+    margin-bottom: 30rem;
+    padding: 30rem;
     display: flex;
-    width: 25%;
-    padding-right: 70rem;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-flow: column;
+    justify-content: center;
     align-items: center;
-    text-decoration: none;
-    list-style: none;
 }
 
-.nav ul a {
-    cursor: pointer;
-    transition: 400ms all cubic-bezier(0.215, 0.610, 0.355, 1);
-    padding-right: 30rem;
-}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.nav h1 {
-    color: #dec129;
-}
-
-.nav ul a:hover {
-    color: #dec129;
-}
-
-.exe3 {
+.exe4 {
+    width: 60%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -98,12 +183,15 @@ form div button {
     gap: 30rem;
 }
 
-.butExe3 {
-    background: #dec129;
-    border-radius: 5rem;
-    border: black 1rem solid;
-    padding: 5rem 20rem 5rem 20rem;
-    font-weight: bold;
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.exe3 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30rem;
+    width: 60%;
 }
 
 .dateExe3 {
@@ -111,14 +199,14 @@ form div button {
     font-size: 20rem;
 }
 
-.exe {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: whitesmoke;
-    margin-top: 30rem;
-    margin-bottom: 30rem;
-    border-radius: 20rem;
-    padding: 30rem;
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.exe2 {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title {
@@ -148,6 +236,16 @@ form div button {
     align-items: start;
     padding: 30rem;
     font-size: 20rem;
+}
+
+.grid1 {
+    width: 80%;
+    display: grid;
+    grid-template-rows: minmax(25%, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "tt tt"
+        "tb1 tb2";
 }
 
 .form2 {
@@ -190,33 +288,24 @@ form div button {
     padding: 10rem;
 }
 
-.grid1 {
-    width: 80%;
-    display: grid;
-    grid-template-rows: minmax(25%, auto);
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "tt tt"
-        "tb1 tb2";
-}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.exe2 {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.exe1 div {
-    display: flex;
-    justify-content: space-between;
+.exe1 {
     width: 40%;
 }
 
+.form1 div {
+    width: 100%;
+}
+
 .resultExe1Painel {
-    max-width: 900rem;
-    margin: 0 auto;
-    min-height: 10vh;
+    width: 100%;
     display: flex;
     flex-flow: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.resultExe1Painel h3 {
+    padding-bottom: 30rem;
 }

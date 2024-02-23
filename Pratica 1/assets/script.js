@@ -1,10 +1,38 @@
+// ******* Exercício de for (exercício 4)
+
+const butExe4 = document.querySelector('.butExe4');
+const butClear4 = document.querySelector('.butClear4');
+const resultExe4 = document.querySelector('.resultExe4');
+
+butExe4.addEventListener('click', function show() {
+
+    const simpleArray = [
+        { tag: 'p', text: 'linha 1' },
+        { tag: 'div', text: 'linha 2' },
+        { tag: 'footer', text: 'linha 3' },
+        { tag: 'section', text: 'linha 4' }
+    ];
+
+    for (let i = 0; i < simpleArray.length; i++) {
+        let { tag, text } = simpleArray[i];
+        resultExe4.innerHTML += `<${tag}>${text}</${tag}>`;
+    }
+
+});
+
+butClear4.addEventListener('click', function clear() {
+    resultExe4.innerHTML = '';
+})
+
 // ******* Exercício objeto date e switch case (exercício 3)
 
 const but = document.querySelector('.butExe3');
+const butClear3 = document.querySelector('.butClear3');
 const resultExe3 = document.querySelector('.resultExe3');
 
-but.addEventListener('click', function horaExata(event) {
-    event.preventDefault();
+but.addEventListener('click', horaAtual);
+
+function horaAtual(event) {
     const date = new Date();
     console.log(date);
 
@@ -15,77 +43,35 @@ but.addEventListener('click', function horaExata(event) {
     let hours = date.getHours();
     let minutes = date.getMinutes();
 
-    switch (dayWeek) {
-        case (0):
-            dayWeek = 'Domingo';
-            break;
-        case (1):
-            dayWeek = 'Segunda-feira';
-            break;
-        case (2):
-            dayWeek = 'Terça-feira';
-            break;
-        case (3):
-            dayWeek = 'Quarta-feira';
-            break;
-        case (4):
-            dayWeek = 'Quinta-feira';
-            break;
-        case (5):
-            dayWeek = 'Sexta-feira';
-            break;
-        case (6):
-            dayWeek = 'Sábado';
-            break;
-        default:
-            dayWeek = 'Null';
+    function whatMonth(m) {
+        const month = ['Janeiro', 'Fervereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+        return month[m];
     }
 
-    switch (month) {
-        case (0):
-            month = 'Janeiro';
-            break;
-        case (1):
-            month = 'Fervereiro';
-            break;
-        case (2):
-            dmonth = 'Março';
-            break;
-        case (3):
-            month = 'Abril';
-            break;
-        case (4):
-            month = 'Maio';
-            break;
-        case (5):
-            month = 'Junho';
-            break;
-        case (6):
-            month = 'Julho';
-            break;
-        case (7):
-            month = 'Agosto';
-            break;
-        case (8):
-            month = 'Setembro';
-            break;
-        case (9):
-            month = 'Outubro';
-            break;
-        case (10):
-            month = 'Novembro';
-            break;
-        case (11):
-            month = 'Dezembro';
-            break;
-        default:
-            month = 'Null';
+    function whatDayWeek(d) {
+        const day = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+        return day[d];
     }
 
+    function zeroFormat(f) {
+        if (f < 10) {
+            f = `0${f}`;
+        }
+        return f;
+    }
 
-    resultExe3.innerHTML = `<p class="dateExe3">${dayWeek}, ${day} de ${month} de ${year}, ${hours}:${minutes};</p>`;
+    resultExe3.innerHTML = `<p class="dateExe3">${whatDayWeek(dayWeek)} | ${zeroFormat(day)} de ${whatMonth(month)} de ${year} | ${zeroFormat(hours)}:${zeroFormat(minutes)}</p>`;
+}
 
-});
+butClear3.addEventListener('click', function clear() {
+    resultExe3.innerHTML = '';
+})
+
+
+/*but.addEventListener('click', function horaAtual() {
+    const data = new Date();
+    resultExe3.innerHTML = data.toLocaleDateString('pt-BR', { dateStyle: 'full', timeStyle: 'short' });
+});*/
 
 
 // *******Objeto date
@@ -196,8 +182,6 @@ function meuEscopo() {
         const height = form.querySelector('.alt');
         const weight = form.querySelector('.peso');
 
-        console.log('check (1)!');
-
         pessoas.push({
             name: name.value,
             lastname: lastname.value,
@@ -205,17 +189,51 @@ function meuEscopo() {
             weight: weight.value
         })
 
-        console.log('check (2)!');
-
         console.log(pessoas);
 
-        result.innerHTML = `<p>${name.value}, ${lastname.value}, ${height.value}, ${weight.value}</p>`;
+        result.innerHTML = `<p> Nome: ${name.value}<br>Sobrenome: ${lastname.value}<br>Altura: ${height.value}m<br>Peso: ${weight.value}Kg</p>`;
 
     }
     form.addEventListener('submit', getEvent);
 }
 meuEscopo();
 
+
+///////////////// js barra lateral /////////////////////
+const menuItem = document.querySelectorAll('.item-menu');
+const butLateral = document.querySelector('.but-lateral');
+const expNav = document.querySelector('.nav');
+const butUp = document.querySelector('.but-up');
+/*let width = 1;*/
+
+butLateral.addEventListener('click', function () {
+    expNav.classList.toggle('expand');
+    /*  if (width == 1) {
+            expNav.classList.add('expand');
+            width++;
+        }
+        else if (width == 2) {
+            expNav.classList.remove('expand');
+            width--;
+        }*/
+});
+
+function selected() {
+    menuItem.forEach((item) =>
+        item.classList.remove('ativo')
+    )
+    this.classList.add('ativo')
+}
+
+menuItem.forEach((item) =>
+    item.addEventListener('click', selected)
+)
+
+butUp.addEventListener('click', function () {
+    menuItem.forEach((item) =>
+        item.classList.remove('ativo')
+    )
+})
 ///////////////// Function /////////////////////
 
 /*function saudacao(name) {
